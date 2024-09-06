@@ -63,9 +63,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '107316073750',
     projectId: 'metrotaxi-782a6',
     storageBucket: 'metrotaxi-782a6.appspot.com',
-    androidClientId: '107316073750-u07e29nn40pdr9o4kvq0qpn1lditvem2.apps.googleusercontent.com',
-    iosClientId: '107316073750-3oa36g6qf8m2o00vda1csp84tp40u5n3.apps.googleusercontent.com',
-    iosBundleId: 'com.mytaxi.customers',
+    androidClientId:
+        '107316073750-u07e29nn40pdr9o4kvq0qpn1lditvem2.apps.googleusercontent.com',
+    iosClientId:
+        '107316073750-3oa36g6qf8m2o00vda1csp84tp40u5n3.apps.googleusercontent.com',
+    iosBundleId: 'com.customer.app',
   );
-
 }

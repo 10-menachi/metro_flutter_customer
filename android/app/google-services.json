@@ -42,7 +42,7 @@
               "client_id": "107316073750-3oa36g6qf8m2o00vda1csp84tp40u5n3.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.mytaxi.customers"
+                "bundle_id": "com.customer.app"
               }
             }
           ]
@@ -86,7 +86,7 @@
               "client_id": "107316073750-3oa36g6qf8m2o00vda1csp84tp40u5n3.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.mytaxi.customers"
+                "bundle_id": "com.customer.app"
               }
             }
           ]

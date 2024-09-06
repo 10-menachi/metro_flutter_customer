@@ -318,7 +318,7 @@ class MyRideDetailsController extends GetxController {
         paymentModel.value.paypal!.isSandbox == true ? true : false;
 
     await _flutterPaypalNativePlugin.init(
-      returnUrl: "com.mytaxi.customer://paypalpay",
+      returnUrl: "com.customer.app://paypalpay",
       clientID: paymentModel.value.paypal!.paypalClient.toString(),
       payPalEnvironment: paymentModel.value.paypal!.isSandbox == true
           ? FPayPalEnvironment.sandbox
