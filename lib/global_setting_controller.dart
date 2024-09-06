@@ -30,12 +30,18 @@ class GlobalSettingController extends GetxController {
       if (value != null) {
         Constant.currencyModel = value;
       } else {
-        Constant.currencyModel = CurrencyModel(id: "", code: "USD", decimalDigits: 2, active: true, name: "US Dollar", symbol: "\$", symbolAtRight: false);
+        Constant.currencyModel = CurrencyModel(
+            id: "",
+            code: "USD",
+            decimalDigits: 2,
+            active: true,
+            name: "US Dollar",
+            symbol: "\$",
+            symbolAtRight: false);
       }
     });
     await FireStoreUtils().getSettings();
     await FireStoreUtils().getPayment();
-    AppThemData.primary500 = HexColor.fromHex(Constant.appColor.toString());
   }
 
   getVehicleTypeList() async {
@@ -53,7 +59,8 @@ class GlobalSettingController extends GetxController {
       String token = await NotificationService.getToken();
       log(":::::::TOKEN:::::: $token");
       if (FirebaseAuth.instance.currentUser != null) {
-        await FireStoreUtils.getUserProfile(FireStoreUtils.getCurrentUid()).then((value) {
+        await FireStoreUtils.getUserProfile(FireStoreUtils.getCurrentUid())
+            .then((value) {
           if (value != null) {
             UserModel userModel = value;
             userModel.fcmToken = token;
@@ -65,7 +72,9 @@ class GlobalSettingController extends GetxController {
   }
 
   getLanguage() async {
-    if (Preferences.getString(Preferences.languageCodeKey).toString().isNotEmpty) {
+    if (Preferences.getString(Preferences.languageCodeKey)
+        .toString()
+        .isNotEmpty) {
       LanguageModel languageModel = await Constant.getLanguage();
       LocalizationService().changeLocale(languageModel.code.toString());
     } else {
